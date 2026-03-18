@@ -1,1 +1,104 @@
-/* Add styles here */
+:root {
+    --bg-color: #f0f2f5;
+    --container-bg: #ffffff;
+    --text-color: #333333;
+    --btn-bg: #008CBA;
+    --btn-hover: #007B9A;
+    --ball-bg: #4CAF50;
+    --shadow: rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="dark"] {
+    --bg-color: #1a1a1a;
+    --container-bg: #2d2d2d;
+    --text-color: #f0f0f0;
+    --btn-bg: #005f7a;
+    --btn-hover: #008CBA;
+    --ball-bg: #388E3C;
+    --shadow: rgba(0, 0, 0, 0.5);
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.container {
+    text-align: center;
+    background: var(--container-bg);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px var(--shadow);
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+h1 {
+    color: var(--text-color);
+    margin-bottom: 30px;
+}
+
+.lotto-numbers {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.lotto-numbers span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--ball-bg);
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.generate-btn {
+    background-color: var(--btn-bg);
+    color: white;
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.generate-btn:hover {
+    background-color: var(--btn-hover);
+}
+
+.theme-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: 2px solid var(--btn-bg);
+    color: var(--btn-bg);
+    padding: 8px 16px;
+    cursor: pointer;
+    border-radius: 20px;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+.theme-toggle:hover {
+    background: var(--btn-bg);
+    color: white;
+}
